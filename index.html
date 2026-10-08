@@ -1,0 +1,3392 @@
+<!DOCTYPE html>
+
+<html lang="yi" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="דיגיטאַל האַנאַ קונסט® — קאָמפּוטאַציאָנעלע שאַפֿער־קראַפֿט אין דער איבערשניידונג פֿון קונסט, דאַטן, קינסטלעכער אינטעליגענץ און בלאָקקייט. אַ פּאָסט־פּאָסטמאָדערנער אַבסטראַקט אויסדרוק, געווֿעבט אין דער אַשכּנזישער ירושה."
+    >
+
+    <meta
+        name="theme-color"
+        content="#0a0a14"
+    >
+
+    <meta
+        property="og:title"
+        content="דיגיטאַל האַנאַ קונסט® — אַבסטראַקט מאָטאָר"
+    >
+
+    <meta
+        property="og:description"
+        content="קונסט × דאַטן × אינטעליגענץ × בלאָקקייט × אַבסטראַקציע"
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:image"
+        content="assets/DHA_logo.png"
+    >
+
+    <title>
+        דיגיטאַל האַנאַ קונסט® — [אַבסטראַקט מאָטאָר]
+    </title>
+
+
+    <!-- =====================================================
+         שריפֿטן · FONTS
+    ====================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700;900&family=Noto+Serif+Hebrew:wght@300;400;500;600;700;900&family=Noto+Sans+Hebrew:wght@300;400;500;600;700&family=David+Libre:wght@400;500;700&family=Suez+One&family=DM+Mono:wght@300;400;500&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <style>
+
+        /* =====================================================
+           ד.ה.אַ. — אַבסטראַקט פּראָטאָקאָל · ייִדישע אויסגאַבע
+           DHA — ABSTRACT PROTOCOL · YIDDISH EDITION
+           (פּאַפּירשניט · כתב־יד · טלית־פּסים · ווילנע)
+        ====================================================== */
+
+        :root {
+
+            /* טינט — ink */
+            --טינט: #0a0a14;
+            --טינט-2: #12121e;
+            --טינט-3: #1c1c2a;
+
+            /* פּאַפּיר — parchment */
+            --פאפיר: #ece4d0;
+            --פאפיר-2: #c9bfa3;
+            --אש: #8a8270;
+            --שאטן: #4a4538;
+
+            /* פֿאַרבן — accents */
+            --יין: #8a1a2e;       /* wine — old Haggadot */
+            --יין-2: #6a1122;
+            --גאלד: #c9a227;     /* gold leaf */
+            --אינדיגא: #1e3a6b;  /* indigo — Forverts ink */
+
+            --קו: rgba(236,228,208,.22);
+            --קו-ווייך: rgba(236,228,208,.07);
+
+            --ברייט: 1400px;
+
+        }
+
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+            background: var(--טינט);
+            direction: rtl;
+        }
+
+
+        body {
+
+            background: var(--טינט);
+
+            color: var(--פאפיר);
+
+            font-family:
+                "Frank Ruhl Libre",
+                "Noto Serif Hebrew",
+                "David Libre",
+                Georgia,
+                serif;
+
+            overflow-x: hidden;
+
+            cursor: crosshair;
+
+            position: relative;
+
+            line-height: 1.8;
+
+        }
+
+
+        ::selection {
+            background: var(--יין);
+            color: var(--פאפיר);
+        }
+
+
+        /* =====================================================
+           פּאַפּיר־טעקסטור · PAPER TEXTURE
+        ====================================================== */
+
+        body::before {
+
+            content: "";
+
+            position: fixed;
+
+            inset: 0;
+
+            pointer-events: none;
+
+            z-index: 9997;
+
+            opacity: .05;
+
+            background-image:
+
+                repeating-conic-gradient(
+                    from 0deg,
+                    rgba(236,228,208,.12) 0deg,
+                    rgba(0,0,0,.10) 1deg,
+                    rgba(236,228,208,.06) 2deg,
+                    rgba(0,0,0,.06) 3deg
+                );
+
+            mix-blend-mode: overlay;
+
+        }
+
+
+        /* גאָלד־שטויב · gold-flake lattice + soft glow */
+
+        body::after {
+
+            content: "";
+
+            position: fixed;
+
+            inset: 0;
+
+            pointer-events: none;
+
+            z-index: 9996;
+
+            background:
+
+                radial-gradient(
+                    circle,
+                    rgba(201,162,39,.05) 1.5px,
+                    transparent 2px
+                ) 0 0 / 34px 34px,
+
+                radial-gradient(
+                    circle,
+                    rgba(138,26,46,.045) 1.5px,
+                    transparent 2px
+                ) 17px 17px / 34px 34px,
+
+                radial-gradient(
+                    ellipse at 12% 8%,
+                    rgba(138,26,46,.07),
+                    transparent 42%
+                ),
+
+                radial-gradient(
+                    ellipse at 88% 72%,
+                    rgba(30,58,107,.09),
+                    transparent 45%
+                );
+
+            mix-blend-mode: screen;
+
+        }
+
+
+        /* =====================================================
+           קינעמאַטיק · KEYFRAMES
+        ====================================================== */
+
+        @keyframes טינט-פֿאַרשפּרייט {
+
+            0% {
+                transform: translate(0, 0);
+                clip-path: inset(0 0 0 0);
+            }
+            6% {
+                transform: translate(-2px, 2px);
+                clip-path: inset(12% 0 76% 0);
+            }
+            12% {
+                transform: translate(3px, -1px);
+                clip-path: inset(42% 0 38% 0);
+            }
+            18% {
+                transform: translate(-1px, -3px);
+                clip-path: inset(68% 0 12% 0);
+            }
+            24% {
+                transform: translate(0, 0);
+                clip-path: inset(0 0 0 0);
+            }
+            100% {
+                transform: translate(0, 0);
+                clip-path: inset(0 0 0 0);
+            }
+
+        }
+
+
+        @keyframes פּען-שטריך {
+
+            0%, 100% { clip-path: inset(0 0 0 0); }
+            10% { clip-path: inset(22% 0 58% 0); }
+            20% { clip-path: inset(78% 0 12% 0); }
+            30% { clip-path: inset(38% 0 32% 0); }
+            40% { clip-path: inset(8% 0 88% 0); }
+            50% { clip-path: inset(0 0 0 0); }
+
+        }
+
+
+        @keyframes ליכט-שטראל {
+
+            0% { top: -100%; }
+            100% { top: 200%; }
+
+        }
+
+
+        @keyframes דריי-רעכץ {
+
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+
+        }
+
+
+        @keyframes דריי-קעגן {
+
+            0% { transform: rotate(360deg); }
+            100% { transform: rotate(0deg); }
+
+        }
+
+
+        @keyframes פֿלאַם {
+
+            0%, 100% { opacity: .55; transform: scale(1); }
+            50% { opacity: .95; transform: scale(1.04); }
+
+        }
+
+
+        @keyframes פּאַפּיר-דריי {
+
+            0% { background-position: 0 0, 0 0; }
+            100% { background-position: 40px 40px, 80px 80px; }
+
+        }
+
+
+        /* =====================================================
+           שטראל · SCANLINE
+        ====================================================== */
+
+        .שטראל {
+
+            position: fixed;
+
+            inset-inline: 0;
+
+            height: 1px;
+
+            background: linear-gradient(
+                90deg,
+                transparent,
+                var(--יין),
+                var(--גאלד),
+                transparent
+            );
+
+            opacity: .18;
+
+            pointer-events: none;
+
+            z-index: 9000;
+
+            animation: ליכט-שטראל 11s linear infinite;
+
+        }
+
+
+        /* =====================================================
+           טלית־פּאַס · TALLIT-STRIPE BAND
+        ====================================================== */
+
+        .פאס {
+
+            height: 18px;
+
+            width: 100%;
+
+            background:
+
+                repeating-linear-gradient(
+                    90deg,
+                    var(--פאפיר) 0 4px,
+                    transparent 4px 8px
+                ),
+
+                repeating-linear-gradient(
+                    90deg,
+                    var(--אינדיגא) 0 26px,
+                    transparent 26px 30px,
+                    var(--יין) 30px 34px,
+                    transparent 34px 38px,
+                    var(--גאלד) 38px 40px,
+                    transparent 40px 46px
+                ),
+
+                var(--טינט-3);
+
+            opacity: .92;
+
+        }
+
+
+        .פאס-דין {
+
+            height: 8px;
+
+            width: 100%;
+
+            background:
+
+                repeating-linear-gradient(
+                    90deg,
+                    var(--יין) 0 12px,
+                    transparent 12px 18px,
+                    var(--גאלד) 18px 24px,
+                    transparent 24px 30px,
+                    var(--אינדיגא) 30px 42px,
+                    transparent 42px 48px
+                );
+
+            opacity: .6;
+
+        }
+
+
+        /* =====================================================
+           נאַוויגאַציע · NAV
+        ====================================================== */
+
+        nav {
+
+            position: fixed;
+
+            inset-block-start: 0;
+            inset-inline: 0;
+
+            z-index: 1000;
+
+            background: rgba(10,10,20,.88);
+
+            border-block-end: 1px solid var(--קו);
+
+            backdrop-filter: blur(20px);
+
+            -webkit-backdrop-filter: blur(20px);
+
+            padding: 0 clamp(16px, 4vw, 60px);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            height: 66px;
+
+        }
+
+
+        nav::after {
+
+            content: "";
+
+            position: absolute;
+
+            inset-inline-start: 0;
+            inset-block-end: -4px;
+
+            width: 100%;
+            height: 4px;
+
+            background:
+
+                repeating-linear-gradient(
+                    90deg,
+                    var(--יין) 0 8px,
+                    transparent 8px 12px,
+                    var(--גאלד) 12px 18px,
+                    transparent 18px 22px,
+                    var(--אינדיגא) 22px 30px,
+                    transparent 30px 34px
+                );
+
+            opacity: .6;
+
+        }
+
+
+        .נאַוו-צייכן {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            font-family: "Suez One", "Frank Ruhl Libre", serif;
+
+            font-weight: 400;
+
+            font-size: 16px;
+
+            letter-spacing: .02em;
+
+            color: var(--פאפיר);
+
+            text-decoration: none;
+
+        }
+
+
+        .נאַוו-לאָגאָ {
+
+            width: 30px;
+            height: 30px;
+
+            object-fit: contain;
+
+            filter: invert(1) sepia(.35) hue-rotate(-8deg) contrast(1.15);
+
+        }
+
+
+        .נאַוו-לינקען {
+
+            display: flex;
+
+            gap: 26px;
+
+            align-items: center;
+
+            font-family: "Noto Sans Hebrew", "Rubik", sans-serif;
+
+            font-size: 13px;
+
+            letter-spacing: .04em;
+
+            font-weight: 500;
+
+        }
+
+
+        .נאַוו-לינקען a {
+
+            color: var(--אש);
+
+            text-decoration: none;
+
+            transition: color .2s ease;
+
+            position: relative;
+
+        }
+
+
+        .נאַוו-לינקען a::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset-block-end: -5px;
+            inset-inline-start: 0;
+
+            width: 0;
+            height: 1px;
+
+            background: var(--יין);
+
+            transition: width .3s ease;
+
+        }
+
+
+        .נאַוו-לינקען a:hover {
+            color: var(--פאפיר);
+        }
+
+
+        .נאַוו-לינקען a:hover::before {
+            width: 100%;
+        }
+
+
+        /* שפּראַך · LANGUAGE SWITCH */
+
+        .שפּראַך {
+
+            position: relative;
+
+            display: inline-block;
+
+        }
+
+
+        .שפּראַך-אינפּוט {
+
+            position: absolute;
+
+            opacity: 0;
+
+            width: 0;
+            height: 0;
+
+        }
+
+
+        .שפּראַך-קנאָפּ {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 6px;
+
+            cursor: pointer;
+
+            padding: 8px 14px;
+
+            border: 1px solid var(--קו);
+
+            background: transparent;
+
+            font-family: "Noto Sans Hebrew", "DM Mono", monospace;
+
+            font-size: 11px;
+
+            letter-spacing: .04em;
+
+            color: var(--פאפיר);
+
+            transition: all .2s ease;
+
+            user-select: none;
+
+        }
+
+
+        .שפּראַך-קנאָפּ:hover {
+
+            background: var(--יין);
+
+            color: var(--פאפיר);
+
+            border-color: var(--יין);
+
+        }
+
+
+        .שפּראַך-ליסטע {
+
+            position: absolute;
+
+            inset-block-start: calc(100% + 8px);
+
+            inset-inline-end: 0;
+
+            min-width: 168px;
+
+            background: var(--טינט-2);
+
+            border: 1px solid var(--קו);
+
+            padding: 0;
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            transform: translateY(-4px);
+
+            transition: all .2s ease;
+
+            z-index: 1001;
+
+        }
+
+
+        .שפּראַך-ברירה {
+
+            display: block;
+
+            padding: 10px 16px;
+
+            font-family: "Noto Sans Hebrew", sans-serif;
+
+            font-size: 12px;
+
+            letter-spacing: .02em;
+
+            color: var(--אש);
+
+            text-decoration: none;
+
+            transition: all .2s ease;
+
+            border-block-end: 1px solid rgba(236,228,208,.06);
+
+        }
+
+
+        .שפּראַך-ברירה:hover {
+
+            background: var(--טינט-3);
+
+            color: var(--גאלד);
+
+        }
+
+
+        .שפּראַך-ברירה.אַקטיוו {
+
+            color: var(--פאפיר);
+
+            background: var(--יין);
+
+        }
+
+
+        .שפּראַך-אינפּוט:checked ~ .שפּראַך-ליסטע,
+        .שפּראַך:focus-within .שפּראַך-ליסטע {
+
+            opacity: 1;
+
+            visibility: visible;
+
+            transform: translateY(0);
+
+        }
+
+
+        /* =====================================================
+           ערשטער אַקט · HERO
+        ====================================================== */
+
+        .hero {
+
+            min-height: 100vh;
+
+            display: flex;
+
+            align-items: center;
+
+            padding: 110px 0 60px;
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+        .hero-גאַנג {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 50px;
+
+            align-items: center;
+
+            width: 100%;
+
+        }
+
+
+        .hero-שטימע {
+
+            position: relative;
+
+            z-index: 2;
+
+        }
+
+
+        .hero-אויפן {
+
+            font-family: "Noto Sans Hebrew", sans-serif;
+
+            font-size: 11px;
+
+            font-weight: 600;
+
+            letter-spacing: .22em;
+
+            color: var(--גאלד);
+
+            margin-block-end: 22px;
+
+            display: inline-block;
+
+            border: 1px solid var(--גאלד);
+
+            padding: 8px 18px;
+
+            transform: rotate(1deg);
+
+            background: rgba(201,162,39,.06);
+
+        }
+
+
+        .hero-ציטאט {
+
+            font-family: "Frank Ruhl Libre", serif;
+
+            font-style: italic;
+
+            font-size: 17px;
+
+            letter-spacing: .01em;
+
+            color: var(--פאפיר-2);
+
+            margin-block-end: 30px;
+
+            padding-inline-start: 22px;
+
+            border-inline-start: 2px solid var(--יין);
+
+            transform: rotate(.4deg);
+
+            line-height: 1.7;
+
+        }
+
+
+        .hero-ציטאט .חתימה {
+
+            display: block;
+
+            font-family: "Noto Sans Hebrew", sans-serif;
+
+            font-style: normal;
+
+            font-size: 12px;
+
+            letter-spacing: .06em;
+
+            color: var(--אש);
+
+            margin-block-start: 10px;
+
+        }
+
+
+        .hero-שטימע h1 {
+
+            font-family: "Suez One", "Frank Ruhl Libre", serif;
+
+            font-weight: 400;
+
+            font-size: clamp(3.2rem, 11vw, 9rem);
+
+            line-height: .96;
+
+            letter-spacing: .01em;
+
+            position: relative;
+
+        }
+
+
+        .hero-שטימע h1 .וואָרט {
+
+            display: block;
+
+            position: relative;
+
+        }
+
+
+        .hero-שטימע h1 .וואָרט-1 {
+
+            color: var(--פאפיר);
+
+            text-shadow:
+
+                5px 0 0 var(--יין),
+
+                -4px 0 0 var(--אינדיגא);
+
+            animation: פּען-שטריך 7s infinite;
+
+        }
+
+
+        .hero-שטימע h1 .וואָרט-2 {
+
+            color: transparent;
+
+            -webkit-text-stroke: 2px var(--יין);
+
+            font-style: italic;
+
+            transform: translateX(-26px);
+
+            animation: טינט-פֿאַרשפּרייט 9s infinite;
+
+        }
+
+
+        .hero-שטימע h1 .וואָרט-3 {
+
+            color: var(--טינט);
+
+            background: var(--גאלד);
+
+            padding: 0 20px;
+
+            display: inline-block;
+
+            transform: skewX(6deg);
+
+            animation: פֿלאַם 5s infinite;
+
+        }
+
+
+        .hero-שטימע p {
+
+            margin-block-start: 42px;
+
+            max-width: 620px;
+
+            font-family: "Frank Ruhl Libre", serif;
+
+            font-size: 17px;
+
+            line-height: 2;
+
+            color: var(--אש);
+
+            border-inline-start: 3px solid var(--יין);
+
+            padding-inline-start: 22px;
+
+        }
+
+
+        .hero-שטימע p strong {
+
+            color: var(--פאפיר);
+
+            font-weight: 700;
+
+            border-block-end: 2px solid var(--גאלד);
+
+        }
+
+
+        .hero-טאַטן {
+
+            display: flex;
+
+            gap: 16px;
+
+            margin-block-start: 42px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+        .קנאָפּ {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            padding: 14px 30px;
+
+            font-family: "Noto Sans Hebrew", sans-serif;
+
+            font-size: 13px;
+
+            font-weight: 500;
+
+            letter-spacing: .05em;
+
+            text-decoration: none;
+
+            border: 1px solid var(--קו);
+
+            background: transparent;
+
+            color: var(--פאפיר);
+
+            transition: all .25s ease;
+
+            position: relative;
+
+            overflow: hidden;
+
+            z-index: 1;
+
+        }
+
+
+        .קנאָפּ::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset-block-start: 0;
+            inset-inline-start: -100%;
+
+            width: 100%;
+            height: 100%;
+
+            background: var(--יין);
+
+            transition: inset-inline-start .25s ease;
+
+            z-index: -1;
+
+        }
+
+
+        .קנאָפּ:hover::before {
+            inset-inline-start: 0;
+        }
+
+
+        .קנאָפּ:hover {
+
+            color: var(--פאפיר);
+
+            border-color: var(--יין);
+
+        }
+
+
+        .קנאָפּ-הויפּט {
+
+            background: var(--יין);
+
+            color: var(--פאפיר);
+
+            border-color: var(--יין);
+
+        }
+
+
+        .קנאָפּ-הויפּט::before {
+            background: var(--גאלד);
+        }
+
+
+        .קנאָפּ-הויפּט:hover {
+            color: var(--טינט);
+            border-color: var(--גאלד);
+        }
+
+
+        /* =====================================================
+           פּאַפּירשניט · PAPERCUT (hero visual)
+        ====================================================== */
+
+        .hero-קונסט {
+
+            position: relative;
+
+            min-height: 660px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+        }
+
+
+        .פּאַפּיר-ראם {
+
+            position: relative;
+
+            width: min(100%, 500px);
+
+            aspect-ratio: 5 / 6;
+
+            background: var(--טינט-2);
+
+            border: 2px solid var(--גאלד);
+
+            padding: 20px;
+
+            box-shadow:
+
+                0 0 0 6px var(--טינט),
+
+                0 0 0 7px var(--קו),
+
+                0 30px 90px rgba(138,26,46,.22);
+
+            overflow: hidden;
+
+        }
+
+
+        .פּאַפּיר-ראם::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 8px;
+
+            border: 1px solid var(--יין);
+
+            pointer-events: none;
+
+            z-index: 5;
+
+        }
+
+
+        .פּאַפּיר-ראם::after {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 16px;
+
+            border: 1px solid rgba(201,162,39,.4);
+
+            pointer-events: none;
+
+            z-index: 5;
+
+        }
+
+
+        /* corner papercut ornaments */
+
+        .ווינקל {
+
+            position: absolute;
+
+            width: 52px;
+            height: 52px;
+
+            border: 1px solid var(--גאלד);
+
+            z-index: 6;
+
+            pointer-events: none;
+
+            opacity: .65;
+
+        }
+
+
+        .ווינקל-1 {
+
+            inset-block-start: 24px;
+            inset-inline-start: 24px;
+
+            border-inline-end: none;
+            border-block-end: none;
+
+        }
+
+
+        .ווינקל-2 {
+
+            inset-block-start: 24px;
+            inset-inline-end: 24px;
+
+            border-inline-start: none;
+            border-block-end: none;
+
+        }
+
+
+        .ווינקל-3 {
+
+            inset-block-end: 24px;
+            inset-inline-start: 24px;
+
+            border-inline-end: none;
+            border-block-start: none;
+
+        }
+
+
+        .ווינקל-4 {
+
+            inset-block-end: 24px;
+            inset-inline-end: 24px;
+
+            border-inline-start: none;
+            border-block-start: none;
+
+        }
+
+
+        /* papercut rosette — radiating gold rays on dark ground */
+
+        .פּאַפּירשניט {
+
+            position: absolute;
+
+            inset: 22px;
+
+            background:
+
+                repeating-conic-gradient(
+                    from 0deg at 50% 50%,
+                    rgba(201,162,39,.30) 0deg 1.2deg,
+                    transparent 1.2deg 8deg
+                ),
+
+                repeating-conic-gradient(
+                    from 4deg at 50% 50%,
+                    rgba(138,26,46,.26) 0deg 1deg,
+                    transparent 1deg 16deg
+                ),
+
+                radial-gradient(
+                    circle at 50% 50%,
+                    rgba(201,162,39,.22) 0%,
+                    transparent 55%
+                ),
+
+                var(--טינט-3);
+
+            animation: פּאַפּיר-דריי 80s linear infinite;
+
+            z-index: 1;
+
+        }
+
+
+        /* concentric ornamental rings */
+
+        .רויז {
+
+            position: absolute;
+
+            inset: 22px;
+
+            display: grid;
+
+            place-items: center;
+
+            z-index: 2;
+
+            pointer-events: none;
+
+        }
+
+
+        .רינג {
+
+            position: absolute;
+
+            border-radius: 50%;
+
+            border: 1px solid;
+
+        }
+
+
+        .רינג-1 {
+
+            width: 84%;
+            height: 84%;
+
+            border-color: rgba(138,26,46,.6);
+
+            border-style: dashed;
+
+            animation: דריי-רעכץ 60s linear infinite;
+
+        }
+
+
+        .רינג-2 {
+
+            width: 64%;
+            height: 64%;
+
+            border-color: rgba(201,162,39,.6);
+
+            animation: דריי-קעגן 45s linear infinite;
+
+        }
+
+
+        .רינג-3 {
+
+            width: 44%;
+            height: 44%;
+
+            border-color: rgba(30,58,107,.75);
+
+            border-style: dotted;
+
+            border-width: 2px;
+
+            animation: דריי-רעכץ 30s linear infinite;
+
+        }
+
+
+        .רינג-4 {
+
+            width: 24%;
+            height: 24%;
+
+            border-color: rgba(201,162,39,.85);
+
+            animation: דריי-קעגן 22s linear infinite;
+
+        }
+
+
+        /* monumental alef */
+
+        .אות {
+
+            position: absolute;
+
+            inset: 0;
+
+            display: grid;
+
+            place-items: center;
+
+            font-family: "Suez One", "Frank Ruhl Libre", serif;
+
+            font-size: clamp(9rem, 22vw, 17rem);
+
+            color: var(--פאפיר);
+
+            text-shadow:
+
+                6px 6px 0 var(--יין),
+
+                -4px -4px 0 var(--גאלד),
+
+                0 0 60px rgba(138,26,46,.55);
+
+            z-index: 4;
+
+            animation: פֿלאַם 7s infinite;
+
+            line-height: 1;
+
+        }
+
+
+        .פּאַפּיר-קעפּל {
+
+            position: absolute;
+
+            inset-block-end: -46px;
+            inset-inline-start: 50%;
+
+            transform: translateX(50%);
+
+            font-family: "DM Mono", monospace;
+
+            font-size: 10px;
+
+            letter-spacing: .3em;
+
+            color: var(--אש);
+
+            text-transform: uppercase;
+
+            white-space: nowrap;
+
+            z-index: 6;
+
+            direction: ltr;
+
+        }
+
+
+        /* =====================================================
+           באַנד · MARQUEE
+        ====================================================== */
+
+        .באנד {
+
+            border-block-start: 1px solid var(--קו);
+
+            border-block-end: 1px solid var(--קו);
+
+            padding: 20px 0;
+
+            overflow: hidden;
+
+            background: var(--טינט-2);
+
+            position: relative;
+
+        }
+
+
+        .באנד::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+
+                repeating-linear-gradient(
+                    90deg,
+                    transparent 0px,
+                    transparent 62px,
+                    rgba(201,162,39,.05) 63px,
+                    transparent 64px
+                );
+
+            pointer-events: none;
+
+            z-index: 1;
+
+        }
+
+
+        .באנד-רייע {
+
+            display: inline-flex;
+
+            gap: 46px;
+
+            animation: marquee 26s linear infinite;
+
+            font-family: "Frank Ruhl Libre", serif;
+
+            font-size: 17px;
+
+            letter-spacing: .04em;
+
+            white-space: nowrap;
+
+        }
+
+
+        .באנד-רייע span {
+
+            color: var(--אש);
+
+            position: relative;
+
+        }
+
+
+        .באנד-רייע span::before {
+
+            content: "״";
+
+            color: var(--יין);
+
+            margin-inline-end: 8px;
+
+        }
+
+
+        .באנד-רייע span::after {
+
+            content: "״";
+
+            color: var(--יין);
+
+            margin-inline-start: 8px;
+
+        }
+
+
+        @keyframes marquee {
+
+            to { transform: translateX(-50%); }
+
+        }
+
+
+        /* =====================================================
+           אָפּטיילונגען · SECTIONS
+        ====================================================== */
+
+        section {
+
+            padding: 130px 0;
+
+            position: relative;
+
+            border-block-end: 1px solid var(--קו-ווייך);
+
+        }
+
+
+        .כּלי {
+
+            width: min(calc(100% - 40px), var(--ברייט));
+
+            margin: auto;
+
+            position: relative;
+
+        }
+
+
+        .אַקט-עטיקעט {
+
+            font-family: "Noto Sans Hebrew", sans-serif;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            letter-spacing: .18em;
+
+            color: var(--יין);
+
+            margin-block-end: 32px;
+
+            display: inline-block;
+
+            transform: rotate(1deg);
+
+            border-block-end: 2px solid var(--גאלד);
+
+            padding-block-end: 6px;
+
+        }
+
+
+        .אַקט-טיטל {
+
+            font-family: "Suez One", "Frank Ruhl Libre", serif;
+
+            font-size: clamp(2.4rem, 6vw, 6rem);
+
+            line-height: 1.02;
+
+            font-weight: 400;
+
+            margin-block-end: 34px;
+
+            letter-spacing: .01em;
+
+        }
+
+
+        .אַקט-טיטל .שאָטן {
+
+            color: transparent;
+
+            -webkit-text-stroke: 1.5px var(--גאלד);
+
+            font-style: italic;
+
+        }
+
+
+        .אַקט-טיטל .דורכגעשטראָכן {
+
+            text-decoration: line-through;
+
+            text-decoration-color: var(--יין);
+
+            text-decoration-thickness: 4px;
+
+        }
+
+
+        .אַקט-אַרייַנפיר {
+
+            font-family: "Frank Ruhl Libre", serif;
+
+            font-size: 17px;
+
+            line-height: 2;
+
+            color: var(--אש);
+
+            max-width: 720px;
+
+            margin-block-end: 62px;
+
+            border-inline-start: 3px solid var(--גאלד);
+
+            padding-inline-start: 22px;
+
+        }
+
+
+        /* =====================================================
+           פֿיר תּחומים · DOMAINS
+        ====================================================== */
+
+        .תּחומים {
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 0;
+
+            border: 1px solid var(--קו);
+
+        }
+
+
+        .תּחום {
+
+            padding: 44px 30px;
+
+            min-height: 320px;
+
+            position: relative;
+
+            border-inline-end: 1px solid var(--קו);
+
+            border-block-end: 1px solid var(--קו);
+
+            background: var(--טינט);
+
+            transition: all .3s ease;
+
+            cursor: crosshair;
+
+        }
+
+
+        .תּחום:nth-child(4n) {
+            border-inline-end: none;
+        }
+
+
+        .תּחום:nth-last-child(-n+4) {
+            border-block-end: none;
+        }
+
+
+        .תּחום:hover {
+
+            background: var(--טינט-2);
+
+            transform: translateY(-4px);
+
+            border-color: var(--יין);
+
+        }
+
+
+        .תּחום::before {
+
+            content: attr(data-נומער);
+
+            position: absolute;
+
+            inset-block-start: 22px;
+            inset-inline-end: 26px;
+
+            font-family: "Suez One", serif;
+
+            font-size: 26px;
+
+            color: var(--יין);
+
+            opacity: .85;
+
+        }
+
+
+        .תּחום-צייכן {
+
+            font-family: "Frank Ruhl Libre", serif;
+
+            font-size: 54px;
+
+            margin-block-end: 30px;
+
+            color: var(--גאלד);
+
+            opacity: .9;
+
+            animation: פֿלאַם 6s infinite;
+
+            line-height: 1;
+
+        }
+
+
+        .תּחום h3 {
+
+            font-family: "Suez One", "Frank Ruhl Libre", serif;
+
+            font-size: 20px;
+
+            font-weight: 400;
+
+            letter-spacing: .02em;
+
+            margin-block-end: 16px;
+
+            color: var(--פאפיר);
+
+        }
+
+
+        .תּחום p {
+
+            font-family: "Frank Ruhl Libre", serif;
+
+            font-size: 15px;
+
+            line-height: 1.9;
+
+            color: var(--אש);
+
+        }
+
+
+        /* =====================================================
+           וועגן · ABOUT
+        ====================================================== */
+
+        .וועגן-גאַנג {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 60px;
+
+            align-items: center;
+
+        }
+
+
+        .וועגן-בילד {
+
+            min-height: 520px;
+
+            position: relative;
+
+            background: var(--טינט-2);
+
+            border: 1px solid var(--קו);
+
+            overflow: hidden;
+
+        }
+
+
+        .וועגן-בילד::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+
+                radial-gradient(
+                    circle at 30% 30%,
+                    rgba(138,26,46,.42),
+                    transparent 45%
+                ),
+
+                radial-gradient(
+                    circle at 75% 65%,
+                    rgba(30,58,107,.48),
+                    transparent 45%
+                ),
+
+                radial-gradient(
+                    circle at 50% 92%,
+                    rgba(201,162,39,.28),
+                    transparent 50%
+                );
+
+            filter: blur(34px);
+
+            animation: פֿלאַם 14s ease-in-out infinite;
+
+        }
+
+
+        .וועגן-בילד::after {
+
+            content: "א";
+
+            position: absolute;
+
+            inset-block-start: 50%;
+            inset-inline-start: 50%;
+
+            transform: translate(50%, -50%) rotate(-6deg);
+
+            font-family: "Suez One", serif;
+
+            font-size: clamp(11rem, 24vw, 20rem);
+
+            color: transparent;
+
+            -webkit-text-stroke: 3px var(--יין);
+
+            opacity: .55;
+
+            line-height: 1;
+
+        }
+
+
+        .וועגן-טעקסט h2 {
+
+            font-family: "Suez One", "Frank Ruhl Libre", serif;
+
+            font-size: clamp(2.2rem, 4.6vw, 4.6rem);
+
+            line-height: 1.08;
+
+            font-weight: 400;
+
+            margin-block-end: 24px;
+
+            letter-spacing: .01em;
+
+        }
+
+
+        .וועגן-טעקסט h2 .אונטערגעשטראָכן {
+
+            background: var(--יין);
+
+            color: var(--פאפיר);
+
+            padding: 0 14px;
+
+            display: inline-block;
+
+            transform: skewX(4deg);
+
+        }
+
+
+        .וועגן-טעקסט p {
+
+            font-family: "Frank Ruhl Libre", serif;
+
+            font-size: 16px;
+
+            line-height: 2;
+
+            color: var(--אש);
+
+            margin-block-end: 22px;
+
+        }
+
+
+        .וועגן-טעקסט p strong {
+
+            color: var(--גאלד);
+
+            font-weight: 700;
+
+        }
+
+
+        /* =====================================================
+           ווערק · PROJECTS
+        ====================================================== */
+
+        .ווערק {
+
+            margin-block-end: 44px;
+
+            border: 1px solid var(--קו);
+
+            background: var(--טינט-2);
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            position: relative;
+
+            transition: all .3s ease;
+
+        }
+
+
+        .ווערק:hover {
+
+            border-color: var(--יין);
+
+            transform: translateX(4px);
+
+        }
+
+
+        .ווערק-בילד {
+
+            min-height: 420px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background: var(--טינט);
+
+        }
+
+
+        .ווערק-בילד img {
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            filter: grayscale(100%) sepia(.35) contrast(1.15);
+
+            transition: all .6s ease;
+
+        }
+
+
+        .ווערק:hover .ווערק-בילד img {
+
+            filter: grayscale(0%) sepia(.15) contrast(1.08) hue-rotate(-8deg);
+
+            transform: scale(1.05);
+
+        }
+
+
+        .ווערק-בילד::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+
+                repeating-linear-gradient(
+                    0deg,
+                    transparent 0px,
+                    transparent 4px,
+                    rgba(0,0,0,.35) 5px
+                );
+
+            z-index: 1;
+
+            pointer-events: none;
+
+        }
+
+
+        .ווערק-אינפֿאָ {
+
+            padding: clamp(30px, 5vw, 60px);
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            position: relative;
+
+        }
+
+
+        .ווערק-טאַג {
+
+            font-family: "Noto Sans Hebrew", sans-serif;
+
+            font-size: 11px;
+
+            font-weight: 600;
+
+            letter-spacing: .18em;
+
+            color: var(--גאלד);
+
+            margin-block-end: 22px;
+
+            display: inline-block;
+
+        }
+
+
+        .ווערק-אינפֿאָ h3 {
+
+            font-family: "Suez One", "Frank Ruhl Libre", serif;
+
+            font-size: clamp(1.9rem, 4vw, 4rem);
+
+            line-height: 1.05;
+
+            font-weight: 400;
+
+            margin-block-end: 22px;
+
+            color: var(--פאפיר);
+
+            letter-spacing: .01em;
+
+        }
+
+
+        .ווערק-אינפֿאָ h3 em {
+
+            font-style: italic;
+
+            color: var(--גאלד);
+
+        }
+
+
+        .ווערק-אינפֿאָ p {
+
+            font-family: "Frank Ruhl Libre", serif;
+
+            font-size: 15px;
+
+            line-height: 2;
+
+            color: var(--אש);
+
+            margin-block-end: 26px;
+
+        }
+
+
+        .טעכנאָלאָגיעס {
+
+            display: flex;
+
+            gap: 8px;
+
+            flex-wrap: wrap;
+
+            margin-block-end: 26px;
+
+        }
+
+
+        .טעכנאָלאָגיעס span {
+
+            border: 1px solid var(--קו);
+
+            padding: 6px 12px;
+
+            font-family: "Noto Sans Hebrew", sans-serif;
+
+            font-size: 11px;
+
+            letter-spacing: .04em;
+
+            color: var(--פאפיר-2);
+
+            background: var(--טינט);
+
+        }
+
+
+        .ווערק-לינקען {
+
+            display: flex;
+
+            gap: 10px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+        .ווערק-לינקען .קנאָפּ {
+
+            padding: 12px 20px;
+
+            font-size: 11px;
+
+        }
+
+
+        .ווערק-זיגל {
+
+            position: absolute;
+
+            inset-block-end: 20px;
+            inset-inline-start: 20px;
+
+            width: 74px;
+            height: 74px;
+
+            object-fit: contain;
+
+            z-index: 3;
+
+            padding: 10px;
+
+            background: rgba(0,0,0,.6);
+
+            border: 1px solid var(--קו);
+
+            backdrop-filter: blur(10px);
+
+            -webkit-backdrop-filter: blur(10px);
+
+            filter: none !important;
+
+        }
+
+
+        .ווערק:hover .ווערק-זיגל {
+            border-color: var(--יין);
+        }
+
+
+        .ווערק.ברייט .ווערק-בילד {
+            min-height: 480px;
+        }
+
+
+        /* =====================================================
+           האַנאַ · HANA
+        ====================================================== */
+
+        .האַנאַ-גאַנג {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 60px;
+
+            align-items: center;
+
+        }
+
+
+        .האַנאַ-שטימע h2 {
+
+            font-family: "Suez One", "Frank Ruhl Libre", serif;
+
+            font-size: clamp(2.8rem, 7vw, 7rem);
+
+            line-height: 1;
+
+            font-weight: 400;
+
+            margin-block-end: 24px;
+
+            letter-spacing: .01em;
+
+        }
+
+
+        .האַנאַ-שטימע h2 .וואָרט {
+            display: block;
+        }
+
+
+        .האַנאַ-שטימע h2 .וואָרט-1 {
+            color: var(--פאפיר);
+        }
+
+
+        .האַנאַ-שטימע h2 .וואָרט-2 {
+
+            color: transparent;
+
+            -webkit-text-stroke: 3px var(--יין);
+
+            font-style: italic;
+
+            transform: translateX(-30px);
+
+        }
+
+
+        .האַנאַ-שטימע p {
+
+            font-family: "Frank Ruhl Libre", serif;
+
+            font-size: 16px;
+
+            line-height: 2;
+
+            color: var(--אש);
+
+            margin-block-end: 22px;
+
+        }
+
+
+        .האַנאַ-שטימע p strong {
+            color: var(--גאלד);
+        }
+
+
+        .האַנאַ-בילד {
+
+            min-height: 520px;
+
+            position: relative;
+
+            border: 1px solid var(--קו);
+
+            background: var(--טינט-2);
+
+            overflow: hidden;
+
+        }
+
+
+        .האַנאַ-בילד::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    rgba(201,162,39,.24),
+                    transparent 50%,
+                    rgba(138,26,46,.24)
+                );
+
+            z-index: 1;
+
+            mix-blend-mode: screen;
+
+        }
+
+
+        .האַנאַ-בילד img {
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            filter: contrast(1.28) saturate(1.15) sepia(.12);
+
+            animation: פּען-שטריך 11s infinite;
+
+        }
+
+
+        /* =====================================================
+           די פֿראַגע · PHILOSOPHY
+        ====================================================== */
+
+        .פֿראַגע {
+
+            text-align: center;
+
+            padding: 170px 0;
+
+            background: var(--טינט);
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+        .פֿראַגע::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+
+                radial-gradient(
+                    circle at 50% 50%,
+                    rgba(138,26,46,.14),
+                    transparent 58%
+                );
+
+            pointer-events: none;
+
+        }
+
+
+        .פֿראַגע-צייכן {
+
+            font-family: "Frank Ruhl Libre", serif;
+
+            font-style: italic;
+
+            font-size: 16px;
+
+            letter-spacing: .14em;
+
+            color: var(--יין);
+
+            margin-block-end: 44px;
+
+            position: relative;
+
+        }
+
+
+        .פֿראַגע h2 {
+
+            max-width: 1140px;
+
+            margin: auto;
+
+            font-family: "Suez One", "Frank Ruhl Libre", serif;
+
+            font-size: clamp(2.2rem, 6.2vw, 6.2rem);
+
+            line-height: 1.15;
+
+            font-weight: 400;
+
+            position: relative;
+
+            letter-spacing: .01em;
+
+        }
+
+
+        .פֿראַגע h2 .שורה {
+            display: block;
+            margin-block-end: 12px;
+        }
+
+
+        .פֿראַגע h2 .שורה-1 {
+            color: var(--פאפיר);
+        }
+
+
+        .פֿראַגע h2 .שורה-2 {
+
+            color: transparent;
+
+            -webkit-text-stroke: 2px var(--גאלד);
+
+            font-style: italic;
+
+        }
+
+
+        .פֿראַגע h2 .שורה-3 {
+
+            background: var(--יין);
+
+            color: var(--פאפיר);
+
+            display: inline-block;
+
+            padding: 0 20px;
+
+            transform: skewX(6deg);
+
+        }
+
+
+        /* =====================================================
+           פֿוס · FOOTER
+        ====================================================== */
+
+        footer {
+
+            border-block-start: 3px double var(--גאלד);
+
+            padding: 64px 0 34px;
+
+            background: var(--טינט-2);
+
+            position: relative;
+
+        }
+
+
+        footer::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset-block-start: -3px;
+            inset-inline-start: 0;
+
+            width: 100%;
+            height: 3px;
+
+            background:
+
+                repeating-linear-gradient(
+                    90deg,
+                    var(--יין) 0 12px,
+                    transparent 12px 18px
+                );
+
+        }
+
+
+        .פֿוס-גאַנג {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: flex-start;
+
+            gap: 40px;
+
+            flex-wrap: wrap;
+
+            margin-block-end: 44px;
+
+        }
+
+
+        .פֿוס-צייכן {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 14px;
+
+            font-family: "Suez One", serif;
+
+            font-size: 18px;
+
+            letter-spacing: .02em;
+
+            color: var(--פאפיר);
+
+        }
+
+
+        .פֿוס-לאָגאָ {
+
+            width: 44px;
+            height: 44px;
+
+            object-fit: contain;
+
+            filter: invert(1) sepia(.35) hue-rotate(-8deg);
+
+        }
+
+
+        .פֿוס-אונטער {
+
+            font-family: "Noto Sans Hebrew", sans-serif;
+
+            font-size: 12px;
+
+            color: var(--אש);
+
+            letter-spacing: .06em;
+
+            margin-block-start: 12px;
+
+        }
+
+
+        .פֿוס-לינקען {
+
+            display: flex;
+
+            gap: 26px;
+
+            flex-wrap: wrap;
+
+            font-family: "Noto Sans Hebrew", sans-serif;
+
+            font-size: 11px;
+
+            letter-spacing: .08em;
+
+        }
+
+
+        .פֿוס-לינקען a {
+
+            color: var(--אש);
+
+            text-decoration: none;
+
+            transition: color .2s ease;
+
+        }
+
+
+        .פֿוס-לינקען a:hover {
+            color: var(--גאלד);
+        }
+
+
+        .רעכט {
+
+            border-block-start: 1px solid var(--קו-ווייך);
+
+            padding-block-start: 22px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            font-family: "Noto Sans Hebrew", sans-serif;
+
+            font-size: 11px;
+
+            letter-spacing: .06em;
+
+            color: var(--שאטן);
+
+        }
+
+
+        /* =====================================================
+           רעספּאָנסיוו · RESPONSIVE
+        ====================================================== */
+
+        @media (max-width: 900px) {
+
+            .נאַוו-לינקען { display: none; }
+
+            .hero-גאַנג,
+            .וועגן-גאַנג,
+            .האַנאַ-גאַנג,
+            .ווערק {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .תּחומים {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+
+            .תּחום:nth-child(2n) { border-inline-end: none; }
+
+
+            .hero-קונסט { min-height: 480px; }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .hero {
+                padding: 90px 0 40px;
+            }
+
+
+            .hero-גאַנג { gap: 30px; }
+
+
+            .hero-שטימע h1 { font-size: 3.2rem; }
+
+
+            .hero-קונסט {
+                min-height: 340px;
+                order: -1;
+            }
+
+
+            .תּחומים { grid-template-columns: 1fr; }
+
+
+            .תּחום {
+
+                border-inline-end: none;
+                border-block-end: 1px solid var(--קו);
+                min-height: 260px;
+
+            }
+
+
+            .תּחום:nth-last-child(-n+4) {
+                border-block-end: 1px solid var(--קו);
+            }
+
+
+            .תּחום:last-child { border-block-end: none; }
+
+
+            .פֿוס-גאַנג,
+            .רעכט {
+
+                flex-direction: column;
+
+            }
+
+
+            .פֿוס-לינקען { flex-wrap: wrap; }
+
+
+            .ווערק-זיגל {
+
+                width: 58px;
+                height: 58px;
+                inset-block-end: 14px;
+                inset-inline-start: 14px;
+                padding: 8px;
+
+            }
+
+            .ווערק-לינקען {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+        }
+
+
+        /* =====================================================
+           צוטריטלעכקייט · ACCESSIBILITY
+        ====================================================== */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         ליכט־שטראל
+    ====================================================== -->
+
+    <div class="שטראל"></div>
+
+
+    <!-- =====================================================
+         טלית־פּאַס
+    ====================================================== -->
+
+    <div class="פאס-דין"></div>
+
+
+    <!-- =====================================================
+         נאַוויגאַציע
+    ====================================================== -->
+
+    <nav>
+
+        <a href="#top" class="נאַוו-צייכן">
+
+            <img
+                src="assets/DHA_logo_h.png"
+                alt="דיגיטאַל האַנאַ קונסט"
+                class="נאַוו-לאָגאָ"
+            >
+
+            <span>דיגיטאַל האַנאַ קונסט®</span>
+
+        </a>
+
+
+        <div class="נאַוו-לינקען">
+
+            <a href="#about">וועגן</a>
+
+            <a href="#domains">תּחומים</a>
+
+            <a href="#work">ווערק</a>
+
+            <a href="#hana">האַנאַ</a>
+
+            <a
+                href="https://github.com/DigitalHanaArts"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                קאָד
+            </a>
+
+        </div>
+
+
+        <div class="שפּראַך">
+
+            <input
+                type="checkbox"
+                id="שפּראַך-אינפּוט"
+                class="שפּראַך-אינפּוט"
+                aria-label="עפֿענען שפּראַך־ליסטע"
+            >
+
+            <label for="שפּראַך-אינפּוט" class="שפּראַך-קנאָפּ">
+                [ייִדיש] ▾
+            </label>
+
+            <div class="שפּראַך-ליסטע" role="menu">
+
+                <a href="#" class="שפּראַך-ברירה אַקטיוו">[ייִדיש]</a>
+
+                <a href="https://digitalhanaarts.github.io/dha/" class="שפּראַך-ברירה">[English]</a>
+
+                <a href="https://digitalhanaarts.github.io/dha-zh/" class="שפּראַך-ברירה">[中文]</a>
+
+                <a href="https://digitalhanaarts.github.io/dha-ko/" class="שפּראַך-ברירה">[조선어]</a>
+
+                <a href="https://digitalhanaarts.github.io/dha-hi/" class="שפּראַך-ברירה">[हिन्दी]</a>
+
+                <a href="https://digitalhanaarts.github.io/dha-es/" class="שפּראַך-ברירה">[Español]</a>
+
+                <a href="https://digitalhanaarts.github.io/dha-per/" class="שפּראַך-ברירה">[فارسی]</a>
+
+                <a href="https://digitalhanaarts.github.io/it_dha/" class="שפּראַך-ברירה">[Italiano]</a>
+
+                <a href="https://digitalhanaarts.github.io/dha_ar/" class="שפּראַך-ברירה">[العربية]</a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =====================================================
+         הויפּט
+    ====================================================== -->
+
+    <main id="top">
+
+
+        <!-- =================================================
+             ערשטער אַקט · HERO
+        ================================================== -->
+
+        <section class="hero">
+
+            <div class="כּלי">
+
+                <div class="hero-גאַנג">
+
+                    <div class="hero-שטימע">
+
+                        <span class="hero-אויפן">— דיגיטאַלער קונסט־מאָטאָר —</span>
+
+                        <div class="hero-ציטאט">
+
+                            „אַ שפּראַך איז אַ דיאַלעקט מיט אַן אַרמיי און אַ פֿלאָט."
+
+                            <span class="חתימה">— מאַקס ווײַנרײַך, 1945</span>
+
+                        </div>
+
+                        <h1>
+
+                            <span class="וואָרט וואָרט-1">דיגיטאַל</span>
+
+                            <span class="וואָרט וואָרט-2">האַנאַ</span>
+
+                            <span class="וואָרט וואָרט-3">קונסט®</span>
+
+                        </h1>
+
+                        <p>
+
+                            צווישן <strong>קונסט</strong> און <strong>אַלגאָריטם</strong>,
+
+                            צווישן <strong>דאַטן</strong> און <strong>חלום</strong>,
+
+                            צווישן <strong>אינטעליגענץ</strong> און <strong>אינסטינקט</strong> —
+
+                            אַרבעט ד.ה.אַ. אין טינט און ליכט.
+
+                        </p>
+
+                        <div class="hero-טאַטן">
+
+                            <a href="#work" class="קנאָפּ קנאָפּ-הויפּט">
+                                — באַקוקן די ווערק —
+                            </a>
+
+                            <a
+                                href="https://github.com/DigitalHanaArts"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="קנאָפּ"
+                            >
+                                — GitHub ↗ —
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="hero-קונסט">
+
+                        <div class="פּאַפּיר-ראם">
+
+                            <div class="ווינקל ווינקל-1"></div>
+                            <div class="ווינקל ווינקל-2"></div>
+                            <div class="ווינקל ווינקל-3"></div>
+                            <div class="ווינקל ווינקל-4"></div>
+
+                            <div class="פּאַפּירשניט"></div>
+
+                            <div class="רויז">
+
+                                <div class="רינג רינג-1"></div>
+                                <div class="רינג רינג-2"></div>
+                                <div class="רינג רינג-3"></div>
+                                <div class="רינג רינג-4"></div>
+
+                            </div>
+
+                            <div class="אות">א</div>
+
+                            <div class="פּאַפּיר-קעפּל">DHA · YIDDISH EDITION · א</div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             באַנד
+        ================================================== -->
+
+        <div class="באנד">
+
+            <div class="באנד-רייע">
+
+                <span>קונסט</span>
+                <span>דאַטן</span>
+                <span>קינסטלעכע אינטעליגענץ</span>
+                <span>בלאָקקייט</span>
+                <span>גענעראַטיוו</span>
+                <span>קאָמפּוטאַציע</span>
+                <span>וויזיע</span>
+                <span>אַבסטראַקציע</span>
+                <span>לאַבאָראַטאָריע־קייט</span>
+                <span>פּאַפּירשניט</span>
+                <span>האַנאַ</span>
+
+                <span>קונסט</span>
+                <span>דאַטן</span>
+                <span>קינסטלעכע אינטעליגענץ</span>
+                <span>בלאָקקייט</span>
+                <span>גענעראַטיוו</span>
+                <span>קאָמפּוטאַציע</span>
+                <span>וויזיע</span>
+                <span>אַבסטראַקציע</span>
+                <span>לאַבאָראַטאָריע־קייט</span>
+                <span>פּאַפּירשניט</span>
+                <span>האַנאַ</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             וועגן · ABOUT
+        ================================================== -->
+
+        <section id="about">
+
+            <div class="כּלי">
+
+                <div class="וועגן-גאַנג">
+
+                    <div class="וועגן-בילד"></div>
+
+
+                    <div class="וועגן-טעקסט">
+
+                        <span class="אַקט-עטיקעט">א׳ · דער סטודיאָ</span>
+
+                        <h2>
+
+                            טעכניק איז
+
+                            <span class="אונטערגעשטראָכן">מאַטעריע.</span>
+
+                        </h2>
+
+                        <p>
+
+                            דיגיטאַל האַנאַ קונסט איז אַן עקספּערימענטאַלער וואַרשטאַט
+
+                            פֿאַר קאָמפּוטאַציאָנעלער שאַפֿער־קראַפֿט, וואָס אַרבעט אין
+
+                            <strong>דעם אינטערווײַל־אָרט</strong> צווישן טעכנאָלאָגיע
+
+                            און קינסטלערישער אויסדרוק.
+
+                        </p>
+
+                        <p>
+
+                            מיר בויען ווייכוואַרג, וויזועלע סיסטעמען, מאַשין־לערנען
+
+                            עקספּערימענטן, דאַטן־געפֿירטע קונסט און
+
+                            בלאָקקייט־אָריענטירטע דיגיטאַלע אַקטיוון — אַלץ מיט
+
+                            אַ <strong>פּאָסט־מענטשלעכער סענסיביליטעט</strong>.
+
+                        </p>
+
+                        <p>
+
+                            אונדזער צענטראַלע פֿראַגע איז נישט פּשוט:
+
+                            <strong>וואָס געשעעט ווען קאָמפּוטאַציע ווערט
+
+                            אַ שאַפֿערישער מיטל?</strong>
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             תּחומים · DOMAINS
+        ================================================== -->
+
+        <section id="domains">
+
+            <div class="כּלי">
+
+                <span class="אַקט-עטיקעט">ב׳ · די תּחומים</span>
+
+                <h2 class="אַקט-טיטל">
+
+                    פֿיר תּחומים.
+
+                    <span class="שאָטן">איין סיסטעם.</span>
+
+                    <span class="דורכגעשטראָכן">קיין גרענעצן.</span>
+
+                </h2>
+
+                <p class="אַקט-אַרייַנפיר">
+
+                    ד.ה.אַ. אַרבעט איבער דיסציפּלינען, נישט אין איין
+
+                    טעכנאָלאָגישער קאַטעגאָריע. דאָס איז די אויסגעשטעלטע גראָדעוועבס.
+
+                </p>
+
+
+                <div class="תּחומים">
+
+
+                    <article class="תּחום" data-נומער="א׳">
+
+                        <div class="תּחום-צייכן">◇</div>
+
+                        <h3>דיגיטאַלע קונסט</h3>
+
+                        <p>
+                            גענעראַטיווע סיסטעמען, אַלגאָריטמישע קונסט,
+                            קאָמפּוטאַציאָנעלע פֿאָטאָגראַפֿיע
+                            און עקספּערימענטאַלע דיגיטאַלע מעדיע.
+                        </p>
+
+                    </article>
+
+
+                    <article class="תּחום" data-נומער="ב׳">
+
+                        <div class="תּחום-צייכן">◌</div>
+
+                        <h3>דאַטן־וויסנשאַפֿט</h3>
+
+                        <p>
+                            דאַטן־מינערײַ, אַנאַליז, וויזואַליזאַציע,
+                            סטאַטיסטישע קאָמפּוטאַציע
+                            און דאַטן־געפֿירטע אַנטדעקונג.
+                        </p>
+
+                    </article>
+
+
+                    <article class="תּחום" data-נומער="ג׳">
+
+                        <div class="תּחום-צייכן">◎</div>
+
+                        <h3>אינטעליגענץ</h3>
+
+                        <p>
+                            מאַשין־לערנען, טיפֿן־לערנען,
+                            קאָמפּיוטער־זעעונג
+                            און גענעראַטיווע קינסטלעכע אינטעליגענץ.
+                        </p>
+
+                    </article>
+
+
+                    <article class="תּחום" data-נומער="ד׳">
+
+                        <div class="תּחום-צייכן">⛓</div>
+
+                        <h3>בלאָקקייט</h3>
+
+                        <p>
+                            ען־עף־טי׳ס, דיגיטאַלע אַקטיוון,
+                            קייט־אַנאַליטיק
+                            און דעצענטראַליזירטע שאַפֿער־עקאָסיסטעמען.
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             ווערק · PROJECTS
+        ================================================== -->
+
+        <section id="work">
+
+            <div class="כּלי">
+
+                <span class="אַקט-עטיקעט">ג׳ · אויסגעקליבענע ווערק</span>
+
+                <h2 class="אַקט-טיטל">
+
+                    פֿון <span class="שאָטן">פּיקסעלן</span>
+
+                    צו <span class="דורכגעשטראָכן">אינטעליגענץ</span>.
+
+                </h2>
+
+
+                <!-- =========================================
+                     לאַבאָראַטאָריע־קייט · MLabChain
+                ========================================== -->
+                <div class="ווערק ברייט">
+
+                    <div class="ווערק-בילד">
+
+                        <img
+                            src="assets/MLabChain_v3_Banner.png"
+                            alt="לאַבאָראַטאָריע־קייט · MLabChain — בלאָקקייט־פֿאָרשונג־פּלאַטפֿאָרם"
+                            loading="lazy"
+                        >
+
+                        <img
+                            src="assets/mlabchain.png"
+                            alt="MLabChain זיגל"
+                            class="ווערק-זיגל"
+                        >
+
+                    </div>
+
+                    <div class="ווערק-אינפֿאָ">
+
+                        <span class="ווערק-טאַג">— בלאָקקייט־פּראָטאָקאָל —</span>
+
+                        <h3>לאַבאָראַטאָריע<br><em>קייט</em></h3>
+
+                        <p>
+                            אַ בלאָקקייט־פֿאָרשונג־און־אינזשעניריע־פּלאַטפֿאָרם —
+                            וואָס פֿאַרבינדט לאַבאָראַטאָריע־וויסנשאַפֿט,
+                            דעצענטראַליזירטע אינפֿראַסטרוקטור
+                            און פֿאַראיפֿירבירע קאָמפּוטאַציע.
+                        </p>
+
+                        <div class="טעכנאָלאָגיעס">
+
+                            <span>בלאָקקייט</span>
+                            <span>פֿאַרשפּרייט</span>
+                            <span>וועב3</span>
+                            <span>הויך־ענערגיע־פֿיזיק</span>
+                            <span>פֿאָרשונג</span>
+
+                        </div>
+
+                        <div class="ווערק-לינקען">
+
+                            <a
+                                href="https://github.com/DigitalHanaArts/MLabChain"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="קנאָפּ קנאָפּ-הויפּט"
+                            >
+                                — GitHub ↗ —
+                            </a>
+
+                            <a
+                                href="https://gitlab.cern.ch/abavarch/labchain"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="קנאָפּ"
+                            >
+                                — GitLab ↗ —
+                            </a>
+
+                            <a
+                                href="https://digitalhanaarts.github.io/mlc/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="קנאָפּ"
+                            >
+                                — וועבזײַטל ↗ —
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ד.ה.אַ. וויזיע -->
+                <div class="ווערק">
+
+                    <div class="ווערק-בילד">
+
+                        <img
+                            src="assets/DHA_Vision.png"
+                            alt="ד.ה.אַ. וויזיע"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <div class="ווערק-אינפֿאָ">
+
+                        <span class="ווערק-טאַג">— עקספּערימענטאַלע פּלאַטפֿאָרם —</span>
+
+                        <h3>ד.ה.אַ.<br><em>וויזיע</em></h3>
+
+                        <p>
+                            אַ קונסט־פּלאַטפֿאָרם אויף Julia, וואָס דערקונדט
+                            ווי פֿאָטאָגראַפֿיעס קענען זיך פֿאַרוואַנדלען —
+                            דורך בילד־פּראָצעסירונג, מאַשין־לערנען און
+                            גענעראַטיווע סיסטעמען — אין נײַע דיגיטאַלע ווערק.
+                        </p>
+
+                        <div class="טעכנאָלאָגיעס">
+
+                            <span>Julia</span>
+                            <span>Flux</span>
+                            <span>מאַשין־לערנען</span>
+                            <span>בילד־פּראָצעסירונג</span>
+                            <span>גענעראַטיווע קונסט</span>
+
+                        </div>
+
+                        <a
+                            href="https://github.com/DigitalHanaArts/DHA-Vision"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="קנאָפּ"
+                        >
+                            — זען די פּראָיעקט ↗ —
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- OpenSea -->
+                <div class="ווערק">
+
+                    <div class="ווערק-בילד">
+
+                        <img
+                            src="assets/opensea.io.jpeg"
+                            alt="OpenSea זאַמלונג"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <div class="ווערק-אינפֿאָ">
+
+                        <span class="ווערק-טאַג">— ען־עף־טי זאַמלונג —</span>
+
+                        <h3>OpenSea<br><em>זאַמלונג</em></h3>
+
+                        <p>
+                            באַקוקט די אָפֿיציעלע זאַמלונג פֿון דיגיטאַל האַנאַ
+                            קונסט אויף OpenSea — אויסגעקליבענע דיגיטאַלע אַקטיוון,
+                            גענעראַטיווע ווערק און בלאָקקייט־באַזירטע שאַפֿונגען.
+                        </p>
+
+                        <div class="טעכנאָלאָגיעס">
+
+                            <span>ען־עף־טי</span>
+                            <span>עטעריום</span>
+                            <span>דיגיטאַלע קונסט</span>
+                            <span>בלאָקקייט</span>
+                            <span>OpenSea</span>
+
+                        </div>
+
+                        <a
+                            href="https://opensea.io/Digital__Hana__Arts"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="קנאָפּ"
+                        >
+                            — באַזוכן OpenSea ↗ —
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             האַנאַ · HANA
+        ================================================== -->
+
+        <section id="hana">
+
+            <div class="כּלי">
+
+                <div class="האַנאַ-גאַנג">
+
+                    <div class="האַנאַ-שטימע">
+
+                        <span class="אַקט-עטיקעט">ד׳ · אָנהייב</span>
+
+                        <h2>
+
+                            <span class="וואָרט וואָרט-1">באַגעגנט</span>
+
+                            <span class="וואָרט וואָרט-2">האַנאַ.</span>
+
+                        </h2>
+
+                        <p>
+                            דיגיטאַל האַנאַ קונסט הייסט נאָך האַנאַ —
+                            די קעצעלע אין האַרצן פֿון דער וויזועלער אידענטיטעט.
+                        </p>
+
+                        <p>
+                            איר אָנוועזנהײַט ברענגט עפּעס בײַװוּסט מענטשלעך און
+                            אָרגאַניש אין אַן אַנדערש קאָמפּוטאַציאָנעלער וועלט:
+
+                            <strong>נייגעריקײַט, אייגנאַרטיקײַט און כאַראַקטער.</strong>
+
+                        </p>
+
+                    </div>
+
+                    <div class="האַנאַ-בילד">
+
+                        <img
+                            src="assets/Hana_the_kitten.jpeg"
+                            alt="האַנאַ — די קעצעלע"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             די פֿראַגע · PHILOSOPHY
+        ================================================== -->
+
+        <section class="פֿראַגע">
+
+            <div class="כּלי">
+
+                <span class="פֿראַגע-צייכן">ה׳ · די פֿראַגע</span>
+
+                <h2>
+
+                    <span class="שורה שורה-1">וואָס געשעעט</span>
+
+                    <span class="שורה שורה-2">ווען קאָמפּוטאַציע</span>
+
+                    <span class="שורה שורה-3">ווערט אַ שאַפֿעריש מיטל?</span>
+
+                </h2>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =====================================================
+         פֿוס
+    ====================================================== -->
+
+    <footer>
+
+        <div class="כּלי">
+
+            <div class="פֿוס-גאַנג">
+
+                <div>
+
+                    <div class="פֿוס-צייכן">
+
+                        <img
+                            src="assets/DHA_logo.png"
+                            alt="דיגיטאַל האַנאַ קונסט"
+                            class="פֿוס-לאָגאָ"
+                        >
+
+                        <span>דיגיטאַל האַנאַ קונסט®</span>
+
+                    </div>
+
+                    <div class="פֿוס-אונטער">
+                        קונסט × דאַטן × אינטעליגענץ × בלאָקקייט
+                    </div>
+
+                </div>
+
+                <div class="פֿוס-לינקען">
+
+                    <a
+                        href="https://github.com/DigitalHanaArts"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        — GitHub —
+                    </a>
+
+                    <a href="#top">— צוריק אַרויף ↑ —</a>
+
+                </div>
+
+            </div>
+
+            <div class="רעכט">
+
+                <span>© 2026 דיגיטאַל האַנאַ קונסט®</span>
+
+                <span>קאָמפּוטאַציע ווי אַ שאַפֿעריש מיטל</span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
